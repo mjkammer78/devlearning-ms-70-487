@@ -1,5 +1,7 @@
-﻿using System.Linq;
+﻿using System.Data.Entity.Core.Objects;
+using System.Linq;
 using CodeFirst;
+using EntitiesCore;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CodeFirst_UnitTests
@@ -15,7 +17,24 @@ namespace CodeFirst_UnitTests
             var model = new NorthWindModel();
 
             //Act
-            var category = model.Categories.Single(c => c.CategoryID == categoryid);
+            var category = model.Categories.SingleOrDefault(c => c.CategoryID == categoryid);
+
+            //Assert
+            Assert.IsNotNull(category);
+            Assert.AreEqual(categoryid, category.CategoryID);
+        }
+
+        [DataTestMethod]
+        [DataRow(1, DisplayName = "Category_1_ReturnsSingle")]
+        public void GetCategoriesByIdOnObjectContext(int categoryid)
+        {
+            //Arrange
+            var model = new NorthWindModel();
+            ObjectContext context = model.ConvertContext();
+
+            //Act
+            var categories = context.CreateObjectSet<Category>("Categories");
+            var category = categories.SingleOrDefault(c => c.CategoryID == categoryid);
 
             //Assert
             Assert.IsNotNull(category);

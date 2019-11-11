@@ -69,6 +69,10 @@
       <Project>{8C9A3FE6-A511-47E8-AC01-38AB11E72536}</Project>
       <Name>CodeFirst</Name>
     </ProjectReference>
+    <ProjectReference Include="..\EntitiesCore\EntitiesCore.csproj">
+      <Project>{51db4459-ac05-42f2-97a3-e171916353a0}</Project>
+      <Name>EntitiesCore</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
