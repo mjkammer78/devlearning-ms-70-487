@@ -3,17 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.902
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "PublishNorthWind", "PublishNorthWind\PublishNorthWind.sqlproj", "{D47A63D7-6109-4300-8FCA-8029179A98D1}"
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "PublishNorthWind", "Entities_FromNorthWind\PublishNorthWind\PublishNorthWind.sqlproj", "{D47A63D7-6109-4300-8FCA-8029179A98D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseFirst", "DatabaseFirst\DatabaseFirst.csproj", "{ADEA6BF2-B723-43EE-92EB-437B5D815AE9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseFirst", "2.5_CreateAnEFDataModel\DatabaseFirst\DatabaseFirst.csproj", "{ADEA6BF2-B723-43EE-92EB-437B5D815AE9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirst", "CodeFirst\CodeFirst.csproj", "{8C9A3FE6-A511-47E8-AC01-38AB11E72536}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirst", "2.5_CreateAnEFDataModel\CodeFirst\CodeFirst.csproj", "{8C9A3FE6-A511-47E8-AC01-38AB11E72536}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirst_UnitTests", "CodeFirst_UnitTests\CodeFirst_UnitTests.csproj", "{11A1454B-7F3F-41AC-83F3-DE5F425DDC42}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirst_UnitTests", "2.5_CreateAnEFDataModel\CodeFirst_UnitTests\CodeFirst_UnitTests.csproj", "{11A1454B-7F3F-41AC-83F3-DE5F425DDC42}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseFirst_UnitTests", "DatabaseFirst_UnitTests\DatabaseFirst_UnitTests.csproj", "{58503CD9-ECEE-4F9B-B4B4-D899D3513CF6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseFirst_UnitTests", "2.5_CreateAnEFDataModel\DatabaseFirst_UnitTests\DatabaseFirst_UnitTests.csproj", "{58503CD9-ECEE-4F9B-B4B4-D899D3513CF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntitiesCore", "EntitiesCore\EntitiesCore.csproj", "{51DB4459-AC05-42F2-97A3-E171916353A0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntitiesCore", "Entities_FromNorthWind\EntitiesCore\EntitiesCore.csproj", "{51DB4459-AC05-42F2-97A3-E171916353A0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entities_FromNorthWind", "Entities_FromNorthWind", "{A4FA269D-801D-465F-A1A9-49AE0EF9C527}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.5_CreateAnEFDataModel", "2.5_CreateAnEFDataModel", "{2EE38DDF-CA40-4E4A-B054-DD66891F41AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,6 +54,14 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D47A63D7-6109-4300-8FCA-8029179A98D1} = {A4FA269D-801D-465F-A1A9-49AE0EF9C527}
+		{ADEA6BF2-B723-43EE-92EB-437B5D815AE9} = {2EE38DDF-CA40-4E4A-B054-DD66891F41AB}
+		{8C9A3FE6-A511-47E8-AC01-38AB11E72536} = {2EE38DDF-CA40-4E4A-B054-DD66891F41AB}
+		{11A1454B-7F3F-41AC-83F3-DE5F425DDC42} = {2EE38DDF-CA40-4E4A-B054-DD66891F41AB}
+		{58503CD9-ECEE-4F9B-B4B4-D899D3513CF6} = {2EE38DDF-CA40-4E4A-B054-DD66891F41AB}
+		{51DB4459-AC05-42F2-97A3-E171916353A0} = {A4FA269D-801D-465F-A1A9-49AE0EF9C527}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F1E232C1-732C-410C-95A2-F1D8E73BD9E1}
